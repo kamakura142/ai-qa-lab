@@ -1,4 +1,5 @@
 # ai-qa-lab
+![テスト](https://github.com/kamakura142/ai-qa-lab/actions/workflows/test.yml/badge.svg)
 
 QAエンジニアが **テスト自動化** と **AI活用** を学ぶための学習記録です。
 
