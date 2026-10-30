@@ -1,0 +1,21 @@
+name: テスト
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: ライブラリをインストール
+        run: |
+          pip install pytest pytest-playwright
+          playwright install --with-deps chromium
+      - name: テストを実行
+        run: pytest -v
