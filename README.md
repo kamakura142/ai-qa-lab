@@ -60,9 +60,12 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
 # 3. pytest をインストール
-pip install pytest
+pip install pytest pytest-playwright
 
-# 4. すべてのテストを実行
+# 4. Playwright が使うブラウザ（Chromium）をダウンロード（初回のみ）
+playwright install chromium
+
+# 5. すべてのテストを実行
 pytest
 
 # 詳細表示（テスト名を1件ずつ表示）
@@ -84,7 +87,9 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 
 ```
 ai-qa-lab/
+├── python_basics/          # Python 基礎の練習（5レッスン）
 ├── tests/
+│   ├── pages/              # Playwright のページオブジェクト（Page Object Model）
 │   ├── test_sample.py      # 料金区分の境界値テスト
 │   └── test_practice.py    # 送料計算の同値分割・境界値テスト
 ├── CLAUDE.md               # Claude Code への指示（学習スタイルの設定）
