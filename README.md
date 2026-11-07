@@ -15,17 +15,21 @@ QAエンジニアが **テスト自動化** と **AI活用** を学ぶための�
 
 | ステップ | 内容 | 状況 |
 |---|---|---|
-| 1. Python | 関数・条件分岐など、テストを書くための基礎文法 | 学習中 |
-| 2. pytest | テストフレームワークの基本（assert、例外のテスト） | 学習中 |
-| 3. Playwright | ブラウザを自動操作する E2E テスト | 未着手 |
-| 4. GitHub Actions | プッシュ時にテストを自動実行する CI の構築 | 未着手 |
-| 5. Claude Code の活用 | AI によるコードレビュー・テスト設計の補助 | 一部実践中 |
+| 1. Python | 関数・条件分岐など、テストを書くための基礎文法 | 基礎5レッスン完了（`python_basics/`）。継続学習中 |
+| 2. pytest | テストフレームワークの基本（assert、例外のテスト） | 完了（parametrize、pytest.raises、fixture、決定表） |
+| 3. Playwright | ブラウザを自動操作する E2E テスト | 完了（Page Object Model 構成、`tests/pages/`） |
+| 4. GitHub Actions | プッシュ時にテストを自動実行する CI の構築 | 完了（push で pytest を自動実行、バッジ表示） |
+| 5. Claude Code の活用 | AI によるコードレビュー・テスト設計の補助 | 学習中（次はスキル作成） |
 
 ※ 5 は、学習全体を通して Claude Code にコードレビューを依頼する形で取り入れています。
 
 ## 現在の内容
 
-`tests/` に、テスト設計技法を pytest で実装したものがあります。
+- `python_basics/`：Python 基礎の練習（5レッスン）
+- `tests/pages/`：Playwright の E2E テスト用ページオブジェクト（Page Object Model 構成）
+- GitHub Actions：push 時に pytest を自動実行（結果は冒頭のバッジに表示）
+
+また、`tests/` に、テスト設計技法を pytest で実装したものがあります。
 
 | ファイル | 内容 |
 |---|---|
